@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./output.css">
   <title>restaurante</title>
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen gap-6" >
-  <h1 class="justify-center bg-red-">hello</h1>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-6 rounded-2xl shadow-lg w-80">
+    <h1 class="text-xl font-bold mb-4 text-center">Elige tu plato</h1>
+    <select name="" id="">
+      <option value="carne">Carne</option>
+      <option value="pasta">Pasta</option>
+      <option value="risotto">Risotto</option>
+    </select>
+    <div class="mb-4 space-y-2">
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="vegano">
+        vegano
+      </label>
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="lactosa">
+        Intolerancia a la lactosa
+      </label>
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="glutten">
+        Intolerancia al gluten
+      </label>
+    </div>
+
+    <button onclick="comprobar()" class="w-full bg-blue-500 text-black py-2 rounded hover:bg-blue-600">entregar</button>
+    <p class="resultado" class="mt-4 text-center font-semibold"></p>
+  </div>
   <script src="app.js"></script>
 </body>
+
 </html>
