@@ -11,7 +11,7 @@
 <body class="bg-gray-100 flex items-center justify-center h-screen">
   <div class="bg-white p-6 rounded-2xl shadow-lg w-80">
     <h1 class="text-xl font-bold mb-4 text-center">Elige tu plato</h1>
-    <select name="" id="">
+    <select id="plato" class="w-full p-2 border rounded mb-4">
       <option value="carne">Carne</option>
       <option value="pasta">Pasta</option>
       <option value="risotto">Risotto</option>
@@ -22,17 +22,17 @@
         vegano
       </label>
       <label class="flex items-center gap-2">
+        <input type="checkbox" id="gluten">
+        Intolerancia al gluten
+      </label>
+      <label class="flex items-center gap-2">
         <input type="checkbox" id="lactosa">
         Intolerancia a la lactosa
       </label>
-      <label class="flex items-center gap-2">
-        <input type="checkbox" id="glutten">
-        Intolerancia al gluten
-      </label>
     </div>
 
-    <button onclick="comprobar()" class="w-full bg-blue-500 text-black py-2 rounded hover:bg-blue-600">entregar</button>
-    <p class="resultado" class="mt-4 text-center font-semibold"></p>
+    <button onclick="comprobar()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Orden</button>
+    <p id="resultado" class="mt-4 text-center font-semibold"></p>
   </div>
   <script src="app.js"></script>
 </body>
