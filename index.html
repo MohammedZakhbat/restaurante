@@ -8,33 +8,99 @@
   <title>restaurante</title>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-  <div class="bg-white p-6 rounded-2xl shadow-lg w-80">
-    <h1 class="text-xl font-bold mb-4 text-center">Elige tu plato</h1>
-    <select id="plato" class="w-full p-2 border rounded mb-4">
-      <option value="carne">Carne</option>
-      <option value="pasta">Pasta</option>
-      <option value="risotto">Risotto</option>
-    </select>
-    <div class="mb-4 space-y-2">
-      <label class="flex items-center gap-2">
-        <input type="checkbox" id="vegano">
-        vegano
-      </label>
-      <label class="flex items-center gap-2">
-        <input type="checkbox" id="gluten">
-        Intolerancia al gluten
-      </label>
-      <label class="flex items-center gap-2">
-        <input type="checkbox" id="lactosa">
-        Intolerancia a la lactosa
-      </label>
+<body class="bg-gradient-to-br from-orange-100 via-amber-50 to-red-100 flex items-center justify-center min-h-screen p-3">
+
+  <div class="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+    <div class="bg-gradient-to-r from-orange-500 to-red-500 py-5 px-4 text-center">
+
+      <div class="text-4xl mb-2">
+        🍽️
+      </div>
+
+      <h1 class="text-2xl font-black text-white">
+        Restaurante
+      </h1>
+
+      <p class="text-orange-100 text-sm mt-1">
+        Elige tu plato favorito
+      </p>
+
     </div>
 
-    <button onclick="comprobar()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Orden</button>
-    <p id="resultado" class="mt-4 text-center font-semibold"></p>
-  </div>
-  <script src="app.js"></script>
-</body>
+    <div class="p-4 space-y-4">
 
+      <div>
+
+        <label for="plato"
+          class="block mb-2 font-semibold text-gray-700">
+          Plato
+        </label>
+
+        <select id="plato"
+          class="w-full h-11 rounded-xl border border-orange-200 bg-orange-50 px-3">
+
+          <option value="carne">🥩 Carne</option>
+          <option value="pasta">🍝 Pasta</option>
+          <option value="risotto">🍚 Risotto</option>
+
+        </select>
+
+      </div>
+
+      <div class="space-y-2">
+
+        <label class="flex items-center justify-between bg-orange-50 rounded-xl px-4 py-3">
+
+          <span class="text-sm font-medium text-gray-700">
+            🌱 Vegano
+          </span>
+
+          <input type="checkbox" id="vegano"
+            class="accent-orange-500">
+
+        </label>
+
+        <label class="flex items-center justify-between bg-orange-50 rounded-xl px-4 py-3">
+
+          <span class="text-sm font-medium text-gray-700">
+            🌾 Sin gluten
+          </span>
+
+          <input type="checkbox" id="gluten"
+            class="accent-orange-500">
+
+        </label>
+
+        <label class="flex items-center justify-between bg-orange-50 rounded-xl px-4 py-3">
+
+          <span class="text-sm font-medium text-gray-700">
+            🥛 Sin lactosa
+          </span>
+
+          <input type="checkbox" id="lactosa"
+            class="accent-orange-500">
+
+        </label>
+
+      </div>
+
+      <button onclick="comprobar()"
+        class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 rounded-xl hover:scale-105 transition">
+
+        Ordenar
+
+      </button>
+
+      <div id="resultado"
+        class="text-center font-semibold text-sm min-h-[24px]">
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
 </html>
